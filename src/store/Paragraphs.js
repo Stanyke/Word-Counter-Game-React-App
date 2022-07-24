@@ -8,4 +8,6 @@ const Paragraphs = [
     "As any dedicated reader can clearly see, the manifold is the key to understanding, so far as I know, the pure employment of space.",
     "It remains a mystery why our judgements stand in need to the Transcendental Deduction.",
     "The paralogisms, for these reasons, would be falsified."
-]
+];
+
+export default Paragraphs;
