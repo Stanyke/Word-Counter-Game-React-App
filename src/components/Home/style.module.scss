@@ -5,11 +5,31 @@
   margin: 0px 0px 50px;
 }
 
-.selectedParagraph {
+.selectedParagraph, .textScore {
   text-align: center;
   max-width: 800px;
   margin: auto;
-  margin: 0px auto 50px;
+  margin: 0px auto 20px;
+}
+
+.textScore{
+  font-weight: bold;
+  color: #fff;
+  font-size:  20px;
+}
+
+.timer{
+  font-size: 16px;
+  color: rgb(255, 13, 0);
+  margin: 10px auto;
+}
+
+.leftTextScore{
+  color: tomato;
+}
+
+.rightTextScore{
+  color: rgb(154, 226, 9);
 }
 
 .textBox {
