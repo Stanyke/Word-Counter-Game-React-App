@@ -24,25 +24,6 @@ export default function Home() {
   const counterMinutesRef = useRef();
   const timerRef = useRef(null);
 
-  const refreshSelectedParagraph = useCallback(() => {
-    const shuffledParagraphs = Paragraphs.sort(() => 0.5 - Math.random());
-    const newParagraph = shuffledParagraphs[0];
-    const splittedNewParagraph = newParagraph.split(" ");
-    setSelectedParagraph(newParagraph);
-    setSplittedNewParagraph(splittedNewParagraph);
-    setTotalNumberOfWordsInSelectedParagraph(splittedNewParagraph.length);
-    setTotalNumberOfWordsInCorrectWordsInSelectedParagraph(0);
-    setSplittedNewParagraph([]);
-    setInitialWordInputted("");
-    clearTextArea(true);
-    setTimer(initialTimer);
-    timeCountDown(timeDeadLine(), setTimer, timerRef);
-  }, []);
-
-  useEffect(() => {
-    refreshSelectedParagraph();
-  }, [refreshSelectedParagraph]);
-
   const clearTextArea = (clearAll) => {
     if (timer !== initialTimer) {
       setTotalNumberOfWordsInCorrectWordsInSelectedParagraph(0);
@@ -62,6 +43,25 @@ export default function Home() {
     e.preventDefault();
     timeCountDown(timeDeadLine(), setTimer, timerRef);
   };
+
+  const refreshSelectedParagraph = useCallback(() => {
+    const shuffledParagraphs = Paragraphs.sort(() => 0.5 - Math.random());
+    const newParagraph = shuffledParagraphs[0];
+    const splittedNewParagraph = newParagraph.split(" ");
+    setSelectedParagraph(newParagraph);
+    setSplittedNewParagraph(splittedNewParagraph);
+    setTotalNumberOfWordsInSelectedParagraph(splittedNewParagraph.length);
+    setTotalNumberOfWordsInCorrectWordsInSelectedParagraph(0);
+    setSplittedNewParagraph([]);
+    setInitialWordInputted("");
+    clearTextArea(true);
+    setTimer(initialTimer);
+    timeCountDown(timeDeadLine(), setTimer, timerRef);
+  }, []);
+
+  useEffect(() => {
+    refreshSelectedParagraph();
+  }, [refreshSelectedParagraph]);
 
   return (
     <div>

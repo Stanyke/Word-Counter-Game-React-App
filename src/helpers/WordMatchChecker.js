@@ -13,7 +13,6 @@ const WordMatchChecker = (
   const splittedInputValue = inputValue.split(" ");
   const currentInputValueIndex = splittedInputValue.length;
   const splittedInitialWordInputted = initialWordInputted.split(" ");
-  const trimmedInitialWordInputted = initialWordInputted.trim();
   const lastInputValue = inputValue.substring(
     inputValue.length - 1,
     inputValue.length
